@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Save Data Automatically</title>
+  <style>
+    body { font-family: Arial; max-width: 600px; margin: 50px auto; }
+    input, textarea { width: 100%; padding: 10px; margin: 10px 0; }
+    button { padding: 12px 20px; background: #007bff; color: white; border: none; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <h1>Submit Your Data</h1>
+  
+  <!-- AUTOMATICALLY SAVES TO FILE + EMAIL -->
+  <form action="https://api.web3forms.com/submit" method="POST">
+    
+    <!-- Paste your access key here -->
+    <input type="hidden" name="access_key" value="e62cb245-b2a7-404f-9b05-384b58d1d7e2">
+    
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="phone" placeholder="Phone Number">
+    <textarea name="message" placeholder="Your Message" rows="5"></textarea>
+    
+    <!-- Optional: redirect after submit -->
+    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+    
+    <button type="submit">Submit & Save Automatically</button>
+  </form>
+
+</body>
+</html>
